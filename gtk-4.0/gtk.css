@@ -2,25 +2,25 @@
    ----------------
    use responsibly! */
 
-// Sass thinks we're using the colors in the variables as strings and may shoot
-// warning, it's innocuous and can be defeated by using #{$var}.
+/* Sass thinks we're using the colors in the variables as strings and may shoot */
+/* warning, it's innocuous and can be defeated by using a variable interpolation. */
 
-// These are the colors apps can override. We define the defaults here and
-// define variables for them in _colors.scss
+/* These are the colors apps can override. We define the defaults here and */
+/* define variables for them in _colors.scss */
 
-// destructive-action buttons
-@define-color destructive_bg_color @red_3;
-@define-color destructive_fg_color white;
+/* destructive-action buttons */
+@define-color destructive_bg_color #e65050;
+@define-color destructive_fg_color #ffffff;
 
-// Levelbars, entries, labels and infobars. These don't need text colors
-@define-color success_bg_color @green_4;
-@define-color success_fg_color white;
+/* Levelbars, entries, labels and infobars. These don't need text colors */
+@define-color success_bg_color #86b300;
+@define-color success_fg_color #ffffff;
 
-@define-color warning_bg_color @yellow_5;
-@define-color warning_fg_color RGB(0 0 0 / 80%);
+@define-color warning_bg_color #eba400;
+@define-color warning_fg_color #5c6166;
 
-@define-color error_bg_color @red_3;
-@define-color error_fg_color white;
+@define-color error_bg_color #e65050;
+@define-color error_fg_color #ffffff;
 
 @define-color accent_color oklab(from @accent_bg_color min(l, 0.5) a b);
 @define-color destructive_color oklab(from @destructive_bg_color min(l, 0.5) a b);
@@ -28,62 +28,62 @@
 @define-color warning_color oklab(from @warning_bg_color min(l, 0.5) a b);
 @define-color error_color oklab(from @error_bg_color min(l, 0.5) a b);
 
-// Window
-@define-color window_bg_color #fafafb;
-@define-color window_fg_color RGB(0 0 6 / 80%);
+/* Window */
+@define-color window_bg_color #f8f9fa;
+@define-color window_fg_color #5c6166;
 
-// Views - e.g. text view or tree view
+/* Views - e.g. text view or tree view */
 @define-color view_bg_color #ffffff;
-@define-color view_fg_color RGB(0 0 6 / 80%);
+@define-color view_fg_color #5c6166;
 
-// Header bar, search bar, tab bar
+/* Header bar, search bar, tab bar */
 @define-color headerbar_bg_color #ffffff;
-@define-color headerbar_fg_color RGB(0 0 6 / 80%);
-@define-color headerbar_border_color RGB(0 0 6 / 80%);
+@define-color headerbar_fg_color #5c6166;
+@define-color headerbar_border_color #5c6166;
 @define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color RGB(0 0 6 / 12%);
-@define-color headerbar_darker_shade_color RGB(0 0 6 / 12%);
+@define-color headerbar_shade_color rgba(107, 125, 143, 0.12);
+@define-color headerbar_darker_shade_color rgba(107, 125, 143, 0.12);
 
-// Split pane views
-@define-color sidebar_bg_color #ebebed;
-@define-color sidebar_fg_color RGB(0 0 6 / 80%);
-@define-color sidebar_backdrop_color #f2f2f4;
-@define-color sidebar_shade_color RGB(0 0 6 / 7%);
-@define-color sidebar_border_color RGB(0 0 6 / 7%);
+/* Split pane views */
+@define-color sidebar_bg_color #ebeef0;
+@define-color sidebar_fg_color #5c6166;
+@define-color sidebar_backdrop_color #f8f9fa;
+@define-color sidebar_shade_color rgba(107, 125, 143, 0.07);
+@define-color sidebar_border_color rgba(107, 125, 143, 0.07);
 
-@define-color secondary_sidebar_bg_color #f3f3f5;
-@define-color secondary_sidebar_fg_color RGB(0 0 6 / 80%);
-@define-color secondary_sidebar_backdrop_color #f6f6fa;
-@define-color secondary_sidebar_shade_color RGB(0 0 6 / 7%);
-@define-color secondary_sidebar_border_color RGB(0 0 6 / 7%);
+@define-color secondary_sidebar_bg_color #fafafa;
+@define-color secondary_sidebar_fg_color #5c6166;
+@define-color secondary_sidebar_backdrop_color #fcfcfc;
+@define-color secondary_sidebar_shade_color rgba(107, 125, 143, 0.07);
+@define-color secondary_sidebar_border_color rgba(107, 125, 143, 0.07);
 
-// Cards, boxed lists
+/* Cards, boxed lists */
 @define-color card_bg_color #ffffff;
-@define-color card_fg_color RGB(0 0 6 / 80%);
-@define-color card_shade_color RGB(0 0 6 / 7%);
+@define-color card_fg_color #5c6166;
+@define-color card_shade_color rgba(107, 125, 143, 0.07);
 
-// Dialogs
-@define-color dialog_bg_color #fafafb;
-@define-color dialog_fg_color RGB(0 0 6 / 80%);
+/* Dialogs */
+@define-color dialog_bg_color #f8f9fa;
+@define-color dialog_fg_color #5c6166;
 
-// Popovers
+/* Popovers */
 @define-color popover_bg_color #ffffff;
-@define-color popover_fg_color RGB(0 0 6 / 80%);
-@define-color popover_shade_color RGB(0 0 6 / 7%);
+@define-color popover_fg_color #5c6166;
+@define-color popover_shade_color rgba(107, 125, 143, 0.07);
 
-// Thumbnails
+/* Thumbnails */
 @define-color thumbnail_bg_color #ffffff;
-@define-color thumbnail_fg_color RGB(0 0 6 / 80%);
+@define-color thumbnail_fg_color #5c6166;
 
-// Miscellaneous
-@define-color shade_color RGB(0 0 6 / 7%);
-@define-color scrollbar_outline_color white;
+/* Miscellaneous */
+@define-color shade_color rgba(107, 125, 143, 0.07);
+@define-color scrollbar_outline_color #ffffff;
 
 @media (prefers-color-scheme: dark) {
-  @define-color destructive_bg_color @red_4;
-  @define-color success_bg_color @green_5;
-  @define-color warning_bg_color #cd9309;
-  @define-color error_bg_color @red_4;
+  @define-color destructive_bg_color #f07171;
+  @define-color success_bg_color #6cbf43;
+  @define-color warning_bg_color #e59645;
+  @define-color error_bg_color #f07171;
 
   @define-color accent_color oklab(from @accent_bg_color min(l, 0.5) a b);
   @define-color destructive_color oklab(from @destructive_bg_color min(l, 0.5) a b);
@@ -97,55 +97,55 @@
   @define-color warning_color oklab(from @warning_bg_color max(l, 0.85) a b);
   @define-color error_color oklab(from @error_bg_color max(l, 0.85) a b);
 
-  // Window
-  @define-color window_bg_color #222226;
-  @define-color window_fg_color white;
+  /* Window */
+  @define-color window_bg_color #5c6166;
+  @define-color window_fg_color #ffffff;
 
-  // Views - e.g. text view or tree view
-  @define-color view_bg_color #1d1d20;
-  @define-color view_fg_color white;
+  /* Views - e.g. text view or tree view */
+  @define-color view_bg_color #5c6166;
+  @define-color view_fg_color #ffffff;
 
-  // Header bar, search bar, tab bar
-  @define-color headerbar_bg_color #2e2e32;
-  @define-color headerbar_fg_color white;
-  @define-color headerbar_border_color white;
-  @define-color headerbar_shade_color RGB(0 0 6 / 36%);
-  @define-color headerbar_darker_shade_color RGB(0 0 12 / 90%);
+  /* Header bar, search bar, tab bar */
+  @define-color headerbar_bg_color #6b7d8f;
+  @define-color headerbar_fg_color #ffffff;
+  @define-color headerbar_border_color #ffffff;
+  @define-color headerbar_shade_color rgba(107, 125, 143, 0.36);
+  @define-color headerbar_darker_shade_color rgba(92, 97, 102, 0.90);
 
-  // Split pane views
-  @define-color sidebar_bg_color #2e2e32;
-  @define-color sidebar_fg_color white;
-  @define-color sidebar_backdrop_color #28282c;
-  @define-color sidebar_shade_color RGB(0 0 6 / 25%);
-  @define-color sidebar_border_color RGB(0 0 6 / 36%);
+  /* Split pane views */
+  @define-color sidebar_bg_color #6b7d8f;
+  @define-color sidebar_fg_color #ffffff;
+  @define-color sidebar_backdrop_color #828e9f;
+  @define-color sidebar_shade_color rgba(107, 125, 143, 0.25);
+  @define-color sidebar_border_color rgba(107, 125, 143, 0.36);
 
-  @define-color secondary_sidebar_bg_color #28282c;
-  @define-color secondary_sidebar_fg_color white;
-  @define-color secondary_sidebar_backdrop_color #252529;
-  @define-color secondary_sidebar_shade_color RGB(0 0 6 / 25%);
-  @define-color secondary_sidebar_border_color RGB(0 0 6 / 36%);
+  @define-color secondary_sidebar_bg_color #828e9f;
+  @define-color secondary_sidebar_fg_color #ffffff;
+  @define-color secondary_sidebar_backdrop_color #828e9f;
+  @define-color secondary_sidebar_shade_color rgba(107, 125, 143, 0.25);
+  @define-color secondary_sidebar_border_color rgba(107, 125, 143, 0.36);
 
-  // Cards, boxed lists
-  @define-color card_bg_color RGB(255 255 255 / 8%);
-  @define-color card_fg_color white;
-  @define-color card_shade_color RGB(0 0 6 / 36%);
+  /* Cards, boxed lists */
+  @define-color card_bg_color rgba(252, 252, 252, 0.08);
+  @define-color card_fg_color #ffffff;
+  @define-color card_shade_color rgba(107, 125, 143, 0.36);
 
-  // Dialogs
-  @define-color dialog_bg_color #36363a;
-  @define-color dialog_fg_color white;
+  /* Dialogs */
+  @define-color dialog_bg_color #6b7d8f;
+  @define-color dialog_fg_color #ffffff;
 
-  // Popovers
-  @define-color popover_bg_color #36363a;
-  @define-color popover_fg_color white;
-  @define-color popover_shade_color RGB(0 0 6 / 25%);
+  /* Popovers */
+  @define-color popover_bg_color #6b7d8f;
+  @define-color popover_fg_color #ffffff;
+  @define-color popover_shade_color rgba(107, 125, 143, 0.25);
 
-  // Thumbnails
-  @define-color thumbnail_bg_color #39393d;
-  @define-color thumbnail_fg_color white;
+  /* Thumbnails */
+  @define-color thumbnail_bg_color #828e9f;
+  @define-color thumbnail_fg_color #ffffff;
 
-  // Miscellaneous
-  @define-color shade_color RGB(0 0 6 / 25%);
-  @define-color scrollbar_outline_color RGB(0 0 12 / 95%);
+  /* Miscellaneous */
+  @define-color shade_color rgba(107, 125, 143, 0.25);
+  @define-color scrollbar_outline_color rgba(92, 97, 102, 0.95);
 }
 
 :root {
@@ -159,15 +159,15 @@
 }
 
 :root {
-  --accent-blue: #3584e4;
-  --accent-teal: #2190a4;
-  --accent-green: #3a944a;
-  --accent-yellow: #c88800;
-  --accent-orange: #ed5b00;
-  --accent-red: #e62d42;
-  --accent-pink: #d56199;
-  --accent-purple: #9141ac;
-  --accent-slate: #6f8396;
+  --accent-blue: #22a4e6;
+  --accent-teal: #4cbf99;
+  --accent-green: #86b300;
+  --accent-yellow: #eba400;
+  --accent-orange: #fa8532;
+  --accent-red: #e65050;
+  --accent-pink: #f2a191;
+  --accent-purple: #a37acc;
+  --accent-slate: #6b7d8f;
 
   --accent-bg-color: @accent_bg_color;
   --accent-fg-color: @accent_fg_color;
@@ -242,90 +242,39 @@
   --scrollbar-outline-color: @scrollbar_outline_color;
 
   --active-toggle-bg-color: #ffffff;
-  --active-toggle-fg-color: rgb(0 0 6 / 80%);
+  --active-toggle-fg-color: #5c6166;
 
-  --overview-bg-color: #f3f3f5;
-  --overview-fg-color: rgb(0 0 6 / 80%);
+  --overview-bg-color: #fafafa;
+  --overview-fg-color: #5c6166;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --active-toggle-bg-color: rgb(255 255 255 / 20%);
+    --active-toggle-bg-color: rgba(252, 252, 252, 0.2);
     --active-toggle-fg-color: #ffffff;
 
-    --overview-bg-color: #28282c;
+    --overview-bg-color: #828e9f;
     --overview-fg-color: #ffffff;
   }
 }
 
-// Other colors
-
-$border_opacity: if($contrast == 'high', 50%, 15%);
-$focus_border_opacity: if($contrast == 'high', 80%, 50%);
-
-$border_color: color-mix(in srgb, currentColor var(--border-opacity), transparent);
-$headerbar_border_color: color-mix(in srgb, var(--headerbar-border-color) var(--border-opacity), transparent);
-$link_color: var(--accent-color);
-$link_visited_color: color-mix(in srgb, var(--accent-color) 80%, var(--view-fg-color));
-
-$hover_color: color-mix(in srgb, currentColor 7%, transparent);
-$active_color: color-mix(in srgb, currentColor 16%, transparent);
-$selected_color: color-mix(in srgb, currentColor 10%, transparent);
-$selected_hover_color: color-mix(in srgb, currentColor 13%, transparent);
-$selected_active_color: color-mix(in srgb, currentColor 19%, transparent);
-
-$view_hover_color: color-mix(in srgb, currentColor 4%, transparent);
-$view_active_color: color-mix(in srgb, currentColor 8%, transparent);
-$view_selected_color: color-mix(in srgb, var(--accent-bg-color) 25%, transparent);
-$view_selected_hover_color: color-mix(in srgb, var(--accent-bg-color) 32%, transparent);
-$view_selected_active_color: color-mix(in srgb, var(--accent-bg-color) 39%, transparent);
-
-$trough_color: color-mix(in srgb, currentColor 15%, transparent);
-$trough_hover_color: color-mix(in srgb, currentColor 20%, transparent);
-$trough_active_color: color-mix(in srgb, currentColor 25%, transparent);
-
-$slider_color: color-mix(in srgb, white 80%, var(--view-bg-color));
-$slider_hover_color: white;
-
-$osd_fg_color: RGB(255 255 255 / 90%);
-$osd_bg_color: RGB(0 0 0 / 70%);
-$osd_link_color: color-mix(in srgb, var(--accent-bg-color) 50%, white);
-$osd_link_visited_color: color-mix(in srgb, var(--accent-bg-color) 75%, white);
-
-$toast_bg_color: #505053;
-$toast_fg_color: white;
-
-$tooltip_border_color: RGB(255 255 255 / 10%);
-
-$drop_target_color: var(--accent-bg-color);
-
-$window_outline_color: RGB(255 255 255 / 7%);
-
-//special cased widget colors
-$focus_border_color: color-mix(in srgb, var(--accent-color) $focus_border_opacity, transparent);
-$dim_label_opacity: 55%;
-$dimmer_opacity: 30%;
-$disabled_opacity: 50%;
-$strong_disabled_opacity: 30%;
-
-$standalone-color-oklab-light: Min(l, 0.5) a b;
-$standalone-color-oklab-dark: Max(l, 0.85) a b;
-
-// High Contrast color overrides
-@if $contrast == 'high' {
-  $dim_label_opacity: 90%;
-  $dimmer_opacity: 80%;
-  $disabled_opacity: 40%;
-
-  $trough_color: color-mix(in srgb, currentColor 30%, transparent);
-  $trough_hover_color: color-mix(in srgb, currentColor 40%, transparent);
-  $trough_active_color: color-mix(in srgb, currentColor 50%, transparent);
-  $window_outline_color: RGB(255 255 255 / 30%);
-}
 
 :root {
-  --border-color: #{$border_color};
-  --border-opacity: #{$border_opacity};
-  --dim-opacity: #{$dim_label_opacity};
-  --disabled-opacity: #{$disabled_opacity};
+  --border-opacity: 15%;
+  --dim-opacity: 55%;
+  --disabled-opacity: 50%;
+  --border-color: color-mix(in srgb, currentColor var(--border-opacity), transparent);
+  --headerbar-border-color-computed: color-mix(in srgb, var(--headerbar-border-color) var(--border-opacity), transparent);
+  --link-color: var(--accent-color);
+  --link-visited-color: color-mix(in srgb, var(--accent-color) 80%, var(--view-fg-color));
+  --hover-color: color-mix(in srgb, currentColor 7%, transparent);
+  --active-color: color-mix(in srgb, currentColor 16%, transparent);
+  --selected-color: color-mix(in srgb, currentColor 10%, transparent);
+  --selected-hover-color: color-mix(in srgb, currentColor 13%, transparent);
+  --selected-active-color: color-mix(in srgb, currentColor 19%, transparent);
+  --view-hover-color: color-mix(in srgb, currentColor 4%, transparent);
+  --view-active-color: color-mix(in srgb, currentColor 8%, transparent);
+  --view-selected-color: color-mix(in srgb, var(--accent-bg-color) 25%, transparent);
+  --view-selected-hover-color: color-mix(in srgb, var(--accent-bg-color) 32%, transparent);
+  --view-selected-active-color: color-mix(in srgb, var(--accent-bg-color) 39%, transparent);
 }
